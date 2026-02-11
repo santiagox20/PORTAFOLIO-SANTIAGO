@@ -1,0 +1,217 @@
+/* ===== CONFIGURACIÓN GENERAL ===== */
+body {
+    background-color: #121826; /* gris oscuro elegante */
+    color: #f2f3f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 80px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar-custom {
+    background-color: #0f172a;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #38bdf8;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+    background: linear-gradient(135deg, #1e293b, #020617);
+    padding: 120px 0;
+}
+
+.hero-title {
+    font-size: 3rem;
+    animation: slideDown 1s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #9ca8c0;
+    animation: fadeIn 2s ease;
+}
+
+/* ===== TARJETAS ===== */
+.card-dark {
+    background-color: #171c25;
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-dark:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(59, 91, 233, 0.6);
+}
+
+.card-dark h5{
+    color: #1097f1;
+}
+.card-dark li {
+    color: #f6f7f8;
+}
+
+.card-dark p {
+    color: #fafcf9;
+}
+
+/* ===== BOTONES ===== */
+.btn-primary {
+    background-color: #182b53;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* ===== PROYECTOS ===== */
+.project-list {
+    padding-left: 18px;
+}
+
+.project-list li {
+    margin-bottom: 6px;
+    color: #cbd5f5;
+}
+
+/* ===== CONTACTO ===== */
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* ===== WHATSAPP LINK ===== */
+.whatsapp-link {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.whatsapp-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== ANIMACIÓN MENÚ ===== */
+.nav-link {
+    position: relative;
+    padding: 8px 0;
+    margin-left: 15px;
+    color: #e4e6eb;
+    transition: color 0.3s ease;
+}
+
+/* Línea animada debajo */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #38bdf8;
+    transition: width 0.3s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+    color: #38bdf8;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+/* ===== ANIMACIÓN NAVBAR AL CARGAR ===== */
+.navbar-custom {
+    animation: navbarFadeDown 0.4s ease-out;
+}
+
+/* Keyframes de la animación */
+@keyframes navbarFadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ===== EFECTO VISUAL DETRÁS DEL NOMBRE ===== */
+.hero-title {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+/* Fondo animado */
+.hero-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    width: 130%;
+    height: 70%;
+    background: linear-gradient(
+        120deg,
+        #38bdf8,
+        #6366f1,
+        #a855f7
+    );
+    opacity: 0.25;
+    filter: blur(35px);
+    transform: translateY(-50%);
+    z-index: -1;
+    animation: glowMove 6s ease-in-out infinite;
+    
+}
+
+/* Animación suave */
+@keyframes glowMove {
+    0% {
+        transform: translateY(-50%) translateX(0.4);
+    }
+    50% {
+        transform: translateY(-50%) translateX(20px);
+    }
+    100% {
+        transform: translateY(-50%) translateX(0.4);
+    }
+}
+
+
+
